@@ -1,0 +1,111 @@
+.page-header {
+  outline: 1px solid $out-line-color;
+
+  & .container {
+    @extend %container;
+  }
+
+  & .header {
+    @extend %header;
+  }
+
+  & .main-nav {
+    @extend %main-nav;
+  }
+}
+
+.site-nav {
+  display: flex;
+  margin-left: 80px;
+  @extend %list;
+
+  & .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $title-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    position: relative;
+
+    transition: $transition;
+  }
+
+  & .link:hover,
+  & .link:focus {
+    color: $accent-color;
+  }
+
+  & .page-studio,
+  & .page-portfolio {
+    color: $accent-color;
+  }
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav .page-studio::after,
+.site-nav .page-portfolio::after {
+  content: '';
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  position: absolute;
+  bottom: 0;
+
+  background-color: $accent-color;
+
+  transition: $transition;
+}
+
+.contacts-link {
+  display: flex;
+  margin-left: auto;
+  justify-content: flex-end;
+  @extend %list;
+
+  & .email,
+  & .tel {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $primery-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: $transition;
+  }
+
+  & .email:hover,
+  & .tel:hover,
+  & .email:focus,
+  & .tel:focus {
+    color: $accent-color;
+  }
+}
+
+.email-icon,
+.tel-icon {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: contain;
+  fill: currentColor;
+}
+
+.contacts-link .item:not(:last-child) {
+  margin-right: 30px;
+}

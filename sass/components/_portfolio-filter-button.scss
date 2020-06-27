@@ -1,0 +1,47 @@
+.portfolio {
+  @extend %container;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.hidden {
+  @extend %visually-hidden;
+}
+
+.filter {
+  @extend %list;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+  justify-content: center;
+
+  & .button {
+    background-color: $secondery-bg-color;
+    color: $title-text-color;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    text-align: center;
+
+    height: 38px;
+    border-radius: 4px;
+    padding: 6px 22px;
+    border: 1px solid transparent;
+    display: inline-block;
+
+    transition: $transition;
+  }
+}
+
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+.filter-item .button:hover,
+.filter-item .button:focus {
+  background-color: $accent-color;
+  color: $color;
+  box-shadow: $shadow-filter;
+}

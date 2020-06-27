@@ -1,0 +1,91 @@
+.project {
+  &-block {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-card {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    background: $color;
+    border: 1px solid $border-color;
+    box-sizing: border-box;
+
+    transition: $transition;
+  }
+
+  &-card:hover,
+  &-card:focus {
+    box-shadow: $shadow-project-card;
+  }
+}
+.project-block {
+  & .project {
+    text-decoration: none;
+    display: block;
+  }
+  & .subject {
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+}
+
+.project-card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.card-content {
+  padding: 24px 20px;
+
+  background: $color;
+  color: $primery-text-color;
+  box-sizing: border-box;
+}
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+
+  & .text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 63px 24px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+
+    color: $color;
+    background-color: $bg-overlay-portfolio;
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(100%);
+    transition: $transition;
+  }
+}
+
+.project:hover .text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
