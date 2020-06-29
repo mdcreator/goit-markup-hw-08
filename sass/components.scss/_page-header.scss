@@ -4,32 +4,16 @@
   & .container {
     @extend %container;
   }
-
-  & .header {
-    @extend %header;
-  }
-
-  & .main-nav {
-    @extend %main-nav;
-  }
 }
 
 .site-nav {
-  display: flex;
-  margin-left: 80px;
   @extend %list;
 
   & .link {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
 
     color: $title-text-color;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    text-decoration: none;
+    @extend %ph-fonts;
 
     position: relative;
 
@@ -45,10 +29,6 @@
   & .page-portfolio {
     color: $accent-color;
   }
-}
-
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
 }
 
 .site-nav .page-studio::after,
@@ -69,21 +49,13 @@
 }
 
 .contacts-link {
-  display: flex;
-  margin-left: auto;
-  justify-content: flex-end;
   @extend %list;
 
   & .email,
   & .tel {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
     color: $primery-text-color;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    @extend %ph-tel-fonts;
     text-decoration: none;
 
     transition: $transition;
@@ -99,13 +71,6 @@
 
 .email-icon,
 .tel-icon {
-  margin-right: 10px;
-  display: inline-block;
-  vertical-align: middle;
   background-size: contain;
   fill: currentColor;
-}
-
-.contacts-link .item:not(:last-child) {
-  margin-right: 30px;
 }

@@ -1,21 +1,8 @@
-@import './utilits/variables';
-@import './utilits/placeholder';
-@import './base/normalize';
-@import './components/body';
+@import './utilits.scss/variables';
+@import './utilits.scss/placeholder';
+@import './base.scss/normalize';
+@import './components.scss/body';
 
-@import './base/fonts';
+@import './base.scss/fonts';
 
-@import './components/logo-header';
-@import './components/page-header';
-@import './components/hero';
-@import './components/features';
-@import './components/studio-projects';
-@import './components/team';
-@import './components/clients';
-@import './components/logo-footer';
-@import './components/page-footer';
-
-@import './components/portfolio-filter-button';
-@import './components/portfolio-projects';
-
-@import './components/modal';
+@import './components.scss/page-header';
