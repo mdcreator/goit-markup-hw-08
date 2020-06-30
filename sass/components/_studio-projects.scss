@@ -3,6 +3,10 @@
   padding-top: 94px;
   padding-bottom: 94px;
 
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
+
   &-title {
     @extend %section-title;
     @extend %title-fonts;

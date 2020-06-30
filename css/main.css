@@ -772,6 +772,12 @@ body {
   padding-bottom: 94px;
 }
 
+@media screen and (min-width: 480px) {
+  .projects {
+    display: none;
+  }
+}
+
 .project-item {
   position: relative;
   width: 370px;
