@@ -826,13 +826,15 @@ img {
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
+@media screen and (min-width: 480px) {
+  .team-card {
+    width: 450px;
+  }
+}
+
 .team-pic {
   margin-bottom: 30px;
   width: 100%;
-}
-
-.team-card:not(:last-child) {
-  margin-right: 30px;
 }
 
 .team-list .title {
@@ -850,6 +852,9 @@ img {
 }
 
 .social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -861,6 +866,9 @@ img {
 }
 
 .social-item .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 12px;
   width: 44px;
   height: 44px;

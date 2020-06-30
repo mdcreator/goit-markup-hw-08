@@ -22,6 +22,10 @@
     width: 278px;
     background: $color;
     box-shadow: $shadow-card;
+
+    @media screen and (min-width: 480px) {
+      width: 450px;
+    }
   }
 
   &-pic {
@@ -30,9 +34,9 @@
   }
 }
 
-.team-card:not(:last-child) {
-  margin-right: 30px;
-}
+// .team-card:not(:last-child) {
+//   margin-right: 30px;
+// }
 
 .team-list {
   & .title {
@@ -56,7 +60,7 @@
 .social {
   &-list {
     @extend %list;
-    // display: flex;
+    display: flex;
     justify-content: center;
     margin-bottom: 25px;
   }
@@ -69,7 +73,7 @@
 .social-item {
   & .link {
     @extend %list;
-    // display: flex;
+    display: flex;
     padding: 12px;
     width: 44px;
     height: 44px;
