@@ -1,0 +1,8 @@
+.link-header {
+  @extend %link;
+  color: $accent-color;
+  @extend %logo-header-fonts;
+}
+.logo-header {
+  color: $title-text-color;
+}

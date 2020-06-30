@@ -1,0 +1,94 @@
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: $secondery-bg-color;
+
+  &-title {
+    @extend %container;
+    @extend %section-title;
+    @extend %title-fonts;
+
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+}
+.team {
+  &-list {
+    @extend %list;
+    // display: flex;
+    justify-content: center;
+  }
+  &-card {
+    width: 278px;
+    background: $color;
+    box-shadow: $shadow-card;
+  }
+
+  &-pic {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+
+.team-card:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-list {
+  & .title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+    color: $title-text-color;
+    font-weight: 500;
+
+    @extend %tl-title-fonts;
+  }
+  & .position {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    text-align: center;
+
+    font-weight: 400;
+  }
+}
+
+.social {
+  &-list {
+    @extend %list;
+    // display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+
+  &-item {
+    padding: 0;
+  }
+}
+
+.social-item {
+  & .link {
+    @extend %list;
+    // display: flex;
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+    fill: $fill-social-icon;
+
+    border-radius: 50%;
+
+    background-color: $color;
+
+    transition: $transition;
+  }
+}
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-item {
+  & .link:hover,
+  & .link:focus {
+    fill: $color;
+    background-color: $accent-color;
+  }
+}

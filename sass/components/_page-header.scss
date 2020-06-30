@@ -4,13 +4,25 @@
   & .container {
     @extend %container;
   }
+
+  & .header {
+    // @extend %flex;
+  }
+
+  & .main-nav {
+    // @extend %flex;
+  }
 }
 
 .site-nav {
+  // display: flex;
+  margin-left: 80px;
   @extend %list;
 
   & .link {
     display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     color: $title-text-color;
     @extend %ph-fonts;
@@ -31,9 +43,13 @@
   }
 }
 
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav .page-studio::after,
 .site-nav .page-portfolio::after {
-  content: '';
+  content: "";
 
   display: block;
   width: 100%;
@@ -49,11 +65,16 @@
 }
 
 .contacts-link {
+  // display: flex;
+  margin-left: auto;
+  justify-content: flex-end;
   @extend %list;
 
   & .email,
   & .tel {
     display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     color: $primery-text-color;
     @extend %ph-tel-fonts;
     text-decoration: none;
@@ -71,6 +92,13 @@
 
 .email-icon,
 .tel-icon {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
   background-size: contain;
   fill: currentColor;
+}
+
+.contacts-link .item:not(:last-child) {
+  margin-right: 30px;
 }

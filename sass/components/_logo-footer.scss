@@ -1,0 +1,17 @@
+.footer {
+  &-link,
+  &-logo {
+    // display: inline-block;
+    margin-bottom: 10px;
+    @extend %logo-footer-fonts;
+    @extend %link;
+  }
+
+  &-link {
+    color: $accent-color;
+  }
+
+  &-logo {
+    color: $color;
+  }
+}

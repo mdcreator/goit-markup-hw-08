@@ -33,21 +33,6 @@
   letter-spacing: 0.02em;
 }
 
-%feture-text-fonts {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-}
-
-%feature-title-fonts {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
 %hero-fonts {
   font-weight: 900;
   font-size: 44px;
@@ -70,6 +55,21 @@
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+%feture-text-fonts {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+%feature-title-fonts {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 %feedback-title-fonts {
