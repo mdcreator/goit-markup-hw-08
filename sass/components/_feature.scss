@@ -1,0 +1,51 @@
+.feature {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-top: 1px solid $out-line-color;
+
+  & .hidden {
+    @extend %visually-hidden;
+  }
+
+  &-item {
+    width: 100%;
+  }
+
+  &-icon {
+    display: flex;
+    height: 120px;
+    margin-bottom: 25px;
+    margin: 0 auto 30px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+    background-color: $secondery-bg-color;
+  }
+}
+
+.feature-list {
+  & .text {
+    margin-top: 0px;
+    margin-bottom: 30px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
+
+  & .title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+}

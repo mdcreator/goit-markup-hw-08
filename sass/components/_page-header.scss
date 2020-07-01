@@ -2,24 +2,22 @@
   outline: 1px solid $out-line-color;
 
   & .container {
-    @extend %container;
+    // @extend %container;
   }
 
   & .header {
-    // @extend %flex;
+    @extend %header;
   }
 
   & .main-nav {
-    // @extend %flex;
+    @extend %main-nav;
   }
 }
 
 .site-nav {
-  // display: flex;
+  display: flex;
   margin-left: 80px;
-  @extend %list;
-
-  display: none;
+  // @extend %list;
 
   & .link {
     display: block;
@@ -27,7 +25,11 @@
     padding-bottom: 32px;
 
     color: $title-text-color;
-    @extend %ph-fonts;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
 
     position: relative;
 
@@ -67,12 +69,10 @@
 }
 
 .contacts-link {
-  // display: flex;
+  display: flex;
   margin-left: auto;
   justify-content: flex-end;
-  @extend %list;
-
-  display: none;
+  // @extend %list;
 
   & .email,
   & .tel {
@@ -80,7 +80,10 @@
     padding-top: 32px;
     padding-bottom: 32px;
     color: $primery-text-color;
-    @extend %ph-tel-fonts;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
     text-decoration: none;
 
     transition: $transition;

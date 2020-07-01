@@ -2,4 +2,21 @@ body {
   background-color: $color;
   color: $primery-text-color;
   font-family: Roboto, sans-serif;
+
+  .container {
+    @extend %container;
+  }
+  a {
+    @extend %link;
+  }
+
+  .list {
+    @extend %list;
+  }
+
+  .img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }

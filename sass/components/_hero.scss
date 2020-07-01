@@ -1,6 +1,5 @@
 .overlay {
-  height: 600px;
-  max-width: 1600px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-color: $bg-overlay-hero;
@@ -8,95 +7,48 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-  @media screen and (min-width: 480px) {
-    width: 480px;
-    height: 400px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-    height: 400px;
-  }
-
-  // @media screen and (min-width: 1200px) {
-  //   // width: 1600px;
-  //   height: 600px;
-  // }
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
 
-  @media screen and (min-width: 480px) {
-    width: 480px;
-    padding-top: 118px;
-    padding-bottom: 118px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-    padding-top: 118px;
-    padding-bottom: 118px;
-  }
-
-  // @media screen and (min-width: 1200px) {
-  //   // width: 768px;
-  //   padding-top: 200px;
-  //   padding-bottom: 200px;
-  // }
-
   &-title {
-    // margin-left: auto;
-    // margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0px;
-    margin-bottom: 46px;
-    width: 646px;
+    margin-bottom: 30px;
 
     color: $color;
-    @extend %hero-fonts;
 
-    @media screen and (min-width: 480px) {
-      width: 480px;
-      margin-top: 0px;
-      margin-bottom: 30px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 360px;
-
-      @include fonts(26px, 1.62);
-    }
-
-    @media screen and (min-width: 768px) {
-      width: 768px;
-      margin-top: 0px;
-      margin-bottom: 30px;
-      width: 360px;
-
-      @include fonts(26px, 1.62);
-    }
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
 
   & .button {
-    display: inline-block;
-    padding: 17px 32px;
-    border-radius: 4px;
-    border: none;
-    color: $color;
     background-color: $accent-color;
-
-    @extend %hero-button-fonts;
+    color: $color;
     font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.06em;
     text-decoration: none;
+    border-radius: 4px;
+    padding: 17px 32px;
+    display: inline-block;
+    border: none;
 
     box-shadow: $shadow;
     transform: scale3d(1, 1, 1);
     transition: $transition;
   }
 
-  & .button:hover,
   & .button:focus {
     background-color: $color;
     color: $accent-color;

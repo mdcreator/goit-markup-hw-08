@@ -1,20 +1,25 @@
 .page-footer {
   background-color: $bg-color-footer;
-  padding-top: 48px;
+  padding-top: 60px;
 }
+
 .footer {
-  @extend %container;
-  // @extend %flex;
-  padding-bottom: 24px;
+  align-items: center;
+  padding-bottom: 20px;
 
   &-info {
-    width: calc((100% - 30px) / 12 * 4);
+    margin-bottom: 60px;
+    justify-content: center;
+    text-align: center;
   }
 }
 
 .address {
-  @extend %list;
+  margin-bottom: 60px;
   font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
 
   &-info {
     margin-bottom: 9px;
@@ -26,10 +31,7 @@
   }
 
   & .info {
-    @extend %link;
     color: $primery-text-color;
-
-    transition: $transition;
   }
 
   & .info:hover,
@@ -39,88 +41,85 @@
 }
 
 .social-block {
-  width: calc((100% - 30px) / 12 * 3);
+  margin-bottom: 60px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 
   & .join {
-    // display: inline-block;
-    margin-bottom: 21px;
+    display: inline-block;
+    margin-bottom: 20px;
 
-    @extend %pf-sb-fonts;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 
     color: $color;
   }
 }
 
 .social {
-  @extend %list;
-  // display: flex;
+  display: flex;
+  justify-content: center;
 
   .info {
-    @extend %link;
     fill: $color;
   }
 }
 
 .social-icon {
   & .info {
-    // display: flex;
+    display: flex;
     width: 44px;
     height: 44px;
     border-radius: 50%;
     padding: 12px;
     background-color: $bg-footer-icon;
-
-    transition: $transition;
   }
 
-  & .info:hover,
-  & .info:focus {
-    background-color: $accent-color;
+  &:not(:last-child) {
+    margin-right: 10px;
   }
-}
-
-.social-icon:not(:last-child) {
-  margin-right: 10px;
 }
 
 .exhortation {
-  // display: inline-block;
+  display: inline-block;
   margin-bottom: 21px;
-  @extend %pf-exhortation-fonts;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
   color: $color;
 }
 
-.form {
-  // display: flex;
-}
-
 .input {
-  margin-right: 12px;
-  width: 358px;
+  width: 100%;
   height: 50px;
+  padding-left: 16px;
+  margin-bottom: 20px;
   box-sizing: border-box;
   box-shadow: $shadow;
   border-radius: 4px;
-  @extend %pf-input-fonts;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
 
   color: $bg-footer-icon;
 
-  padding-left: 5px;
-
   border: 1px solid $bg-footer-icon;
   background: $bg-color-footer;
-
-  transition: $transition;
-
-  &:hover,
-  &:focus {
-    border-color: $accent-color;
-  }
 }
 
 .submit {
-  // display: flex;
   width: 200px;
   height: 50px;
   border: 1px solid transparent;
@@ -130,26 +129,15 @@
   background-color: $accent-color;
   color: $color;
 
-  @extend %pf-submit-fonts;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
   align-items: center;
   justify-content: center;
 
   transform: scale3d(1, 1, 1);
   transition: $transition;
-
-  &:hover {
-    transform: scale3d(1.1, 1.1, 1.1);
-  }
-
-  & .icon-send {
-    margin-left: 10px;
-  }
-}
-
-.copyright {
-  padding-top: 18px;
-  padding-bottom: 21px;
-  text-align: center;
-
-  border-top: 1px solid $bg-footer-icon;
 }

@@ -1,7 +1,6 @@
 @import './utilits/variables';
 @import './utilits/placeholder';
 @import './base/normalize';
-@import './base/mixin';
 @import './components/body';
 
 @import './base/fonts';
@@ -9,14 +8,14 @@
 @import './components/logo-header';
 @import './components/page-header';
 @import './components/hero';
-@import './components/features';
-@import './components/studio-projects';
+@import './components/feature';
+// @import './components/studio-projects';
 @import './components/team';
 @import './components/clients';
 @import './components/logo-footer';
 @import './components/page-footer';
 
-@import './components/portfolio-filter-button';
-@import './components/portfolio-projects';
+// @import './components/portfolio-filter-button';
+// @import './components/portfolio-projects';
 
-@import './components/modal';
+// @import './components/modal';

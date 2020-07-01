@@ -9,26 +9,19 @@
 }
 
 %container {
-  width: 1200px;
+  // width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-
-  @media screen and (min-width: 480px) {
-    width: 480px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-  }
 }
 
-%flex {
+%header {
+  display: flex;
+  align-items: center;
+}
+
+%main-nav {
   display: flex;
   align-items: center;
 }
@@ -38,6 +31,12 @@
   margin-bottom: 50px;
 
   color: $title-text-color;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 %visually-hidden {

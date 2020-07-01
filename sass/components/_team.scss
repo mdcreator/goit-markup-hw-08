@@ -1,31 +1,24 @@
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $secondery-bg-color;
 
   &-title {
-    @extend %container;
     @extend %section-title;
-    @extend %title-fonts;
-
-    margin-top: 0px;
-    margin-bottom: 50px;
+    @include fonts(28px, 1.17);
   }
 }
+
 .team {
   &-list {
-    @extend %list;
-    // display: flex;
     justify-content: center;
   }
+
   &-card {
-    width: 278px;
+    margin-bottom: 30px;
+    border-radius: 0px 0px 4px 4px;
     background: $color;
     box-shadow: $shadow-card;
-
-    @media screen and (min-width: 480px) {
-      width: 450px;
-    }
   }
 
   &-pic {
@@ -33,10 +26,6 @@
     width: 100%;
   }
 }
-
-// .team-card:not(:last-child) {
-//   margin-right: 30px;
-// }
 
 .team-list {
   & .title {
@@ -46,8 +35,12 @@
     color: $title-text-color;
     font-weight: 500;
 
-    @extend %tl-title-fonts;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
   }
+
   & .position {
     margin-top: 0px;
     margin-bottom: 16px;
@@ -59,40 +52,33 @@
 
 .social {
   &-list {
-    @extend %list;
     display: flex;
     justify-content: center;
-    margin-bottom: 25px;
   }
 
-  &-item {
-    padding: 0;
+  &-list .link {
+    justify-content: center;
+    align-items: center;
   }
 }
 
 .social-item {
+  margin-bottom: 24px;
+
   & .link {
-    @extend %list;
     display: flex;
-    padding: 12px;
+
     width: 44px;
     height: 44px;
-    fill: $fill-social-icon;
 
-    border-radius: 50%;
+    fill: $fill-social-icon;
 
     background-color: $color;
 
     transition: $transition;
   }
-}
-.social-item:not(:last-child) {
-  margin-right: 10px;
-}
-.social-item {
-  & .link:hover,
-  & .link:focus {
-    fill: $color;
-    background-color: $accent-color;
+
+  &:not(:last-child) {
+    margin-right: 10px;
   }
 }
