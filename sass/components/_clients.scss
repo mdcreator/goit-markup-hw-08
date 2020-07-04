@@ -18,7 +18,6 @@
 
 .client-card {
   width: calc((100% - 30px) / 2);
-  margin-bottom: 30px;
 
   & .link {
     display: flex;
@@ -40,6 +39,18 @@
   }
 }
 
-.client-card:nth-child(odd) {
-  margin-right: 30px;
+.client-card:nth-child(-n + 4) {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .client-card:nth-child(odd) {
+    margin-right: 15px;
+  }
+}
+
+.client {
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 3);
+  }
 }

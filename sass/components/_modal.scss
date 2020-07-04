@@ -30,15 +30,9 @@
   box-shadow: $shadow-card;
   border-radius: 4px;
 
-  // @media screen and (max-width: 767px) {
-  //   padding-top: 93px;
-  //   padding-bottom: 93px;
-  // }
-
-  //   @media screen and (min-width: 768px) {
-  //     padding-top: 208px;
-  //     padding-bottom: 207px;
-  //   }
+  @media screen and (min-width: 768px) {
+    max-width: 450px;
+  }
 
   //   @media screen and (max-width: 1200px) {
   //     padding-top: 221px;
@@ -156,7 +150,6 @@
   font-weight: normal;
   font-size: 12px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
 
   color: $primery-text-color;
 

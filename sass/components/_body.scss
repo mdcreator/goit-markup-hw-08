@@ -2,6 +2,7 @@ body {
   background-color: $color;
   color: $primery-text-color;
   font-family: Roboto, sans-serif;
+  font-size: 14px;
 
   .container {
     @extend %container;

@@ -64,44 +64,90 @@
     flex-grow: 1;
     justify-content: space-between;
   }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .sit-nav {
   @media screen and (max-width: 767px) {
+    position: relative;
     color: $title-text-color;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.16;
-    // letter-spacing: 0.02em;
     text-decoration: none;
+
+    transition: $transition;
+
+    & .item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    color: $title-text-color;
+    font-weight: 500;
+    line-height: 1.14;
+    text-decoration: none;
+
+    transition: $transition;
+  }
+
+  @media screen and (min-width: 1200px) {
+    position: relative;
+    color: $title-text-color;
+    font-weight: 500;
+    line-height: 1.14;
+    text-decoration: none;
+
+    transition: $transition;
+  }
+}
+
+.site-nav .link {
+  @media screen and (max-width: 767px) {
+    position: relative;
+    display: inline-block;
+
+    padding-bottom: 40px;
+
+    color: $title-text-color;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: $transition;
+
+    & .link:hover,
+    & .link:focus {
+      color: $accent-color;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    margin-left: 80px;
+
+    // display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $title-text-color;
+    font-weight: 500;
+    text-decoration: none;
+
     position: relative;
 
     transition: $transition;
   }
 
   & .item:not(:last-child) {
-    margin-bottom: 40px;
-  }
-}
-
-.site-nav .link {
-  position: relative;
-  display: inline-block;
-
-  padding-bottom: 40px;
-
-  color: $title-text-color;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.16;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-
-  transition: $transition;
-
-  & .link:hover,
-  & .link:focus {
-    color: $accent-color;
+    margin-right: 50px;
   }
 }
 
