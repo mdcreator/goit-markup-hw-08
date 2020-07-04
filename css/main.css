@@ -549,6 +549,17 @@ body.modal-open {
   fill: currentColor;
 }
 
+@media screen and (min-width: 768px) {
+  .email-icon,
+  .tel-icon {
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: contain;
+    fill: currentColor;
+  }
+}
+
 .overlay {
   height: 400px;
   margin-left: auto;
@@ -626,24 +637,6 @@ body.modal-open {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
-  .feature-item {
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .feature-item {
-    width: 33.3333%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .feature-item:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
 .feature-icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -661,6 +654,34 @@ body.modal-open {
           justify-content: center;
   border-radius: 4px;
   background-color: #f5f4fa;
+}
+
+@media screen and (min-width: 768px) {
+  .feature-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feature-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feature-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feature-item:nth-child(odd) {
+    margin-right: 30px;
+  }
 }
 
 .feature-list .text {
@@ -773,6 +794,12 @@ body.modal-open {
 }
 
 @media screen and (min-width: 768px) {
+  .team-card:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .team-card {
     width: calc((100% - 30px) / 2);
   }
@@ -874,8 +901,10 @@ body.modal-open {
   border: 1px solid #2196f3;
 }
 
-.client-card:nth-child(-n + 4) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .client-card:nth-child(-n + 4) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -885,8 +914,14 @@ body.modal-open {
 }
 
 @media screen and (min-width: 768px) {
-  .client {
+  .client-card {
     width: calc((100% - 30px) / 3);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .client-card:nth-child(2n + 1) {
+    margin-right: 30px;
   }
 }
 
@@ -1085,6 +1120,29 @@ body.modal-open {
   vertical-align: middle;
 }
 
+@media screen and (min-width: 768px) {
+  .address-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-info {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .social-block {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
 .portfolio {
   padding-top: 60px;
 }
@@ -1095,6 +1153,9 @@ body.modal-open {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   margin-bottom: 40px;
 }
 
@@ -1210,6 +1271,34 @@ body.modal-open {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+@media screen and (min-width: 768px) {
+  .project-blick {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project-card:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project-card {
+    width: calc((100% - 30px) / 2);
+  }
 }
 
 .backdrop {

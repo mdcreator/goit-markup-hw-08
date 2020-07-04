@@ -159,3 +159,21 @@
     vertical-align: middle;
   }
 }
+
+.address-link {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer-info {
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+.social-block {
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+}

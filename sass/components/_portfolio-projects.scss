@@ -83,3 +83,28 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.project-blick {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project-card:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+.project-card {
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+}

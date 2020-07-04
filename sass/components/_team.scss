@@ -63,6 +63,12 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .team-card:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
 .team-card {
   @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 2);

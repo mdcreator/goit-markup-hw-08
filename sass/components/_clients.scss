@@ -39,8 +39,10 @@
   }
 }
 
-.client-card:nth-child(-n + 4) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .client-card:nth-child(-n + 4) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -49,8 +51,14 @@
   }
 }
 
-.client {
+.client-card {
   @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 3);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .client-card:nth-child(2n + 1) {
+    margin-right: 30px;
   }
 }

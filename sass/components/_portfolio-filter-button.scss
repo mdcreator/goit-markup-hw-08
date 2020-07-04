@@ -9,6 +9,7 @@
 .filter {
   display: flex;
   flex-wrap: wrap;
+  justify-content: start;
   margin-bottom: 40px;
 
   & .button {
