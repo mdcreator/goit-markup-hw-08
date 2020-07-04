@@ -19,13 +19,15 @@
     margin-right: auto;
     margin-top: 0px;
     margin-bottom: 30px;
+    // padding-left: 60px;
+    // padding-right: 60px;
 
     color: $color;
 
     font-weight: 900;
     font-size: 26px;
     line-height: 1.62;
-    text-align: center;
+    // text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
@@ -49,6 +51,7 @@
     transition: $transition;
   }
 
+  & .button:hover,
   & .button:focus {
     background-color: $color;
     color: $accent-color;

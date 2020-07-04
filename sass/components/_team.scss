@@ -72,10 +72,17 @@
     height: 44px;
 
     fill: $fill-social-icon;
+    border-radius: 50%;
 
     background-color: $color;
 
     transition: $transition;
+  }
+
+  & .link:hover,
+  & .link:focus {
+    fill: $color;
+    background-color: $accent-color;
   }
 
   &:not(:last-child) {

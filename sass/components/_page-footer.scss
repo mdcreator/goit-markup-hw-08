@@ -83,10 +83,19 @@
   &:not(:last-child) {
     margin-right: 10px;
   }
+
+  & .info:hover,
+  & .info:focus {
+    background-color: $accent-color;
+  }
+}
+
+.exhortation-block {
+  text-align: center;
 }
 
 .exhortation {
-  display: inline-block;
+  display: block;
   margin-bottom: 21px;
   font-style: normal;
   font-weight: 700;
@@ -140,4 +149,13 @@
 
   transform: scale3d(1, 1, 1);
   transition: $transition;
+
+  &:hover {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  & .icon-send {
+    margin-left: 10px;
+    vertical-align: middle;
+  }
 }

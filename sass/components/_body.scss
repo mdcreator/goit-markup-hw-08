@@ -6,6 +6,7 @@ body {
   .container {
     @extend %container;
   }
+
   a {
     @extend %link;
   }
@@ -19,4 +20,8 @@ body {
     width: 100%;
     height: auto;
   }
+}
+
+body.modal-open {
+  overflow: hidden;
 }

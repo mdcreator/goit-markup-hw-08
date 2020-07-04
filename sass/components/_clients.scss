@@ -32,6 +32,12 @@
     border: 1px solid $fill-social-icon;
     border-radius: 4px;
   }
+
+  & .link:hover,
+  & .link:focus {
+    fill: $accent-color;
+    border: 1px solid $accent-color;
+  }
 }
 
 .client-card:nth-child(odd) {

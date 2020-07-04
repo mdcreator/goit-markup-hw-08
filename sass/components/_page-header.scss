@@ -1,54 +1,108 @@
 .page-header {
+  position: relative;
   outline: 1px solid $out-line-color;
+}
 
-  & .container {
-    // @extend %container;
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-button {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+
+  outline: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 
-  & .header {
-    @extend %header;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
   }
 
-  & .main-nav {
-    @extend %main-nav;
+  & .icon-close {
+    display: none;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+
+  &.is-open .icon-close {
+    display: block;
   }
 }
 
-.site-nav {
-  display: flex;
-  margin-left: 80px;
-  // @extend %list;
+.menu-container {
+  @media screen and (max-width: 767px) {
+    display: none;
 
-  & .link {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+    background-color: $color;
+    box-shadow: $box-shadow-menu;
+    text-align: center;
 
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+}
+
+.sit-nav {
+  @media screen and (max-width: 767px) {
     color: $title-text-color;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    font-size: 18px;
+    line-height: 1.16;
+    // letter-spacing: 0.02em;
     text-decoration: none;
-
     position: relative;
 
     transition: $transition;
   }
 
+  & .item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.site-nav .link {
+  position: relative;
+  display: inline-block;
+
+  padding-bottom: 40px;
+
+  color: $title-text-color;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  transition: $transition;
+
   & .link:hover,
   & .link:focus {
     color: $accent-color;
   }
-
-  & .page-studio,
-  & .page-portfolio {
-    color: $accent-color;
-  }
-}
-
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
 }
 
 .site-nav .page-studio::after,
@@ -61,7 +115,6 @@
   border-radius: 2px;
 
   position: absolute;
-  bottom: 0;
 
   background-color: $accent-color;
 
@@ -69,20 +122,16 @@
 }
 
 .contacts-link {
-  display: flex;
   margin-left: auto;
   justify-content: flex-end;
-  // @extend %list;
 
   & .email,
   & .tel {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
     color: $primery-text-color;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 18px;
+    line-height: 1.16;
     letter-spacing: 0.02em;
     text-decoration: none;
 
@@ -100,12 +149,8 @@
 .email-icon,
 .tel-icon {
   margin-right: 10px;
-  display: inline-block;
+  display: none;
   vertical-align: middle;
   background-size: contain;
   fill: currentColor;
-}
-
-.contacts-link .item:not(:last-child) {
-  margin-right: 30px;
 }
