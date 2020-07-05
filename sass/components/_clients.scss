@@ -2,10 +2,20 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+
   &-title {
     margin-bottom: 30px;
     @extend %section-title;
     @include fonts(28px, 1.17);
+
+    @media screen and (min-width: 1200px) {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.16;
+    }
   }
 
   & .list {
@@ -17,7 +27,9 @@
 }
 
 .client-card {
-  width: calc((100% - 30px) / 2);
+  @media screen and (max-width: 767px) {
+    width: calc((100% - 30px) / 2);
+  }
 
   & .link {
     display: flex;
@@ -52,13 +64,37 @@
 }
 
 .client-card {
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     width: calc((100% - 30px) / 3);
   }
 }
 
-@media screen and (min-width: 768px) {
-  .client-card:nth-child(2n + 1) {
+// @media screen and (min-width: 768px) {
+//   .client-card:nth-child(2n + 1) {
+//     margin-right: 30px;
+//   }
+// }
+
+.client .list {
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
+
+.client-card .link {
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+    height: 90px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client-card:not(:last-child) {
     margin-right: 30px;
   }
 }

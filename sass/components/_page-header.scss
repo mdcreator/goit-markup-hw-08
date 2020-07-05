@@ -3,9 +3,22 @@
   outline: 1px solid $out-line-color;
 }
 
+.head {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
+}
+.link-header {
+  @media screen and (min-width: 768px) {
+    margin-right: 80px;
+  }
+}
+
 .main-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .menu-button {
@@ -85,25 +98,21 @@
       margin-bottom: 40px;
     }
   }
+}
 
+.site-nav .item:not(:last-child) {
   @media screen and (min-width: 768px) {
-    position: relative;
-    color: $title-text-color;
-    font-weight: 500;
-    line-height: 1.14;
-    text-decoration: none;
+    margin-right: 40px;
+  }
+}
 
-    transition: $transition;
+.site-nav {
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 
   @media screen and (min-width: 1200px) {
-    position: relative;
-    color: $title-text-color;
-    font-weight: 500;
-    line-height: 1.14;
-    text-decoration: none;
-
-    transition: $transition;
+    display: flex;
   }
 }
 
@@ -131,9 +140,7 @@
 
   @media screen and (min-width: 768px) {
     display: inline-block;
-    margin-left: 80px;
 
-    // display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -171,6 +178,23 @@
   margin-left: auto;
   justify-content: flex-end;
 
+  @media screen and (min-width: 768px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.16;
+  }
+
+  & .item:not(:last-child) {
+    margin-right: 30px;
+  }
+
   & .email,
   & .tel {
     display: block;
@@ -182,6 +206,11 @@
     text-decoration: none;
 
     transition: $transition;
+
+    @media screen and (min-width: 768px) {
+      font-size: 12px;
+      line-height: 1.16;
+    }
   }
 
   & .email:hover,

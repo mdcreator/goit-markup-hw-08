@@ -3,6 +3,12 @@
   padding-bottom: 60px;
   border-top: 1px solid $out-line-color;
 
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding-top: 94px;
+    padding-right: 94px;
+  }
+
   & .hidden {
     @extend %visually-hidden;
   }
@@ -29,6 +35,10 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
   }
 }
 

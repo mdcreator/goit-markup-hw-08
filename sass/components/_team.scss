@@ -3,9 +3,23 @@
   padding-bottom: 60px;
   background-color: $secondery-bg-color;
 
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   &-title {
     @extend %section-title;
     @include fonts(28px, 1.17);
+  }
+}
+
+.team-title {
+  @media screen and (min-width: 1200px) {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
   }
 }
 
@@ -57,6 +71,13 @@
   }
 }
 
+.team-list {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .team-card:not(:last-child) {
     margin-bottom: 30px;
@@ -69,8 +90,14 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .team-card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
 .team-card {
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     width: calc((100% - 30px) / 2);
   }
 }
