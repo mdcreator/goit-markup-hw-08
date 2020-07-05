@@ -204,6 +204,12 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .exhortation-block {
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .exhortation {
     display: inline-block;
