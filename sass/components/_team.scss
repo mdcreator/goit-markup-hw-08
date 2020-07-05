@@ -96,8 +96,14 @@
   }
 }
 
+// .team-card {
+//   @media screen and (max-width: 767px) {
+//     width: 450px;
+//   }
+// }
+
 .team-card {
-  @media screen and (min-width: 768px) {
+  @media screen and (mix-width: 768px) {
     width: calc((100% - 30px) / 2);
   }
 }
