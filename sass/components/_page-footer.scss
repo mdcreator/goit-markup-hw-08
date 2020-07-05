@@ -204,8 +204,9 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .exhortation-block {
+    max-width: 450px;
     text-align: center;
   }
 }
