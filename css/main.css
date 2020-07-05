@@ -760,7 +760,7 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .feature-item {
     width: calc((100% - 30px) / 2);
   }
@@ -1625,7 +1625,7 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .project-card:not(:last-child) {
     margin-bottom: 30px;
   }
