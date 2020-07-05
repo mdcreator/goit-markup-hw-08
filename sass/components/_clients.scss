@@ -64,7 +64,7 @@
 }
 
 .client-card {
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 1199px) {
     width: calc((100% - 30px) / 3);
   }
 }
@@ -75,9 +75,9 @@
 //   }
 // }
 
-.client .list {
+.client-card {
   @media screen and (min-width: 1200px) {
-    width: 1200px;
+    // width: 1200px;
     padding-top: 94px;
     padding-bottom: 94px;
     display: flex;

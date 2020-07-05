@@ -1100,15 +1100,14 @@ img {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
   .client-card {
     width: calc((100% - 30px) / 3);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .client .list {
-    width: 1200px;
+  .client-card {
     padding-top: 94px;
     padding-bottom: 94px;
     display: -webkit-box;
