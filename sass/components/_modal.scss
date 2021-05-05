@@ -5,6 +5,8 @@
   left: 0;
   width: 100%;
   height: 100%;
+  opacity: 1;
+  z-index: 10;
   background-color: $backdrop;
   transition: $transition;
   overflow-y: scroll;
@@ -17,27 +19,52 @@
 }
 
 .modal {
-  position: relative;
+  // position: relative;
   padding: 40px;
-  top: 50%;
-  left: 50%;
-
-  opacity: 1;
-  background: $backdrop;
-  transform: translate(-50%, -50%);
-
   background: $color;
   box-shadow: $shadow-card;
   border-radius: 4px;
 
-  @media screen and (min-width: 768px) {
-    max-width: 450px;
+  // opacity: 1;
+  @media screen and (min-width: 560px) {
+    position: absolute;
+    min-width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    // max-width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  //   @media screen and (max-width: 1200px) {
-  //     padding-top: 221px;
-  //     padding-bottom: 222px;
-  //   }
+  .modal-close {
+    position: absolute;
+    display: flex;
+
+    @media screen and (max-width: 559px) {
+      top: 101px;
+      right: 23px;
+    }
+
+    top: 8px;
+    right: 8px;
+    padding: 5px;
+    background: $color;
+    border: 1px solid $border-close;
+    box-sizing: border-box;
+    border-radius: 50%;
+    transition: $transition;
+
+    &:hover {
+      background-color: $accent-color;
+      fill: $color;
+      border: 1px solid transparent;
+    }
+  }
 
   & .title {
     display: block;
@@ -212,29 +239,5 @@
   &:hover {
     background-color: $color;
     color: $accent-color;
-  }
-}
-
-.modal-close {
-  position: absolute;
-  display: flex;
-  top: 0;
-  right: 0;
-
-  padding: 5px;
-  margin-right: 8px;
-  margin-top: 8px;
-
-  background: $color;
-  border: 1px solid $border-close;
-  box-sizing: border-box;
-  border-radius: 50%;
-
-  transition: $transition;
-
-  &:hover {
-    background-color: $accent-color;
-    fill: $color;
-    border: 1px solid transparent;
   }
 }

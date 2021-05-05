@@ -21,7 +21,7 @@
     display: flex;
     height: 120px;
     margin-bottom: 25px;
-    margin: 0 auto 30px;
+    margin: 0 auto;
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
@@ -43,10 +43,33 @@
 }
 
 .feature-item {
-  @media screen and (max-width: 1199px) {
+  & :not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+  }
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 30px * 4) / 4);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
+
+// @media screen and (max-width: 1199px) {
+//   width: calc((100% - 30px) / 2);
+// }
 
 @media screen and (min-width: 768px) {
   .feature-item:not(:last-child) {
@@ -54,7 +77,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .feature-item:nth-child(odd) {
     margin-right: 30px;
   }
@@ -63,7 +86,8 @@
 .feature-list {
   & .text {
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
+    // margin-bottom: 30px;
 
     font-weight: 400;
     font-size: 14px;
@@ -87,6 +111,7 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
   }
 
   @media screen and (min-width: 1200px) {

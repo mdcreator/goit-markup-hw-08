@@ -30,7 +30,7 @@
 
   outline: transparent;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 
@@ -53,7 +53,7 @@
 }
 
 .menu-container {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet - 1px) {
     display: none;
 
     position: absolute;
@@ -72,19 +72,20 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
+    align-items: baseline;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     display: flex;
   }
 }
 
 .sit-nav {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet - 1px) {
     position: relative;
     color: $title-text-color;
     font-weight: 500;
@@ -101,13 +102,13 @@
 }
 
 .site-nav .item:not(:last-child) {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     margin-right: 40px;
   }
 }
 
 .site-nav {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
   }
 
@@ -117,12 +118,11 @@
 }
 
 .site-nav .link {
-  @media screen and (max-width: 767px) {
-    position: relative;
+  position: relative;
+
+  @media screen and (max-width: $tablet - 1px) {
     display: inline-block;
-
     padding-bottom: 40px;
-
     color: $title-text-color;
     font-weight: 500;
     font-size: 18px;
@@ -161,7 +161,6 @@
 .site-nav .page-studio::after,
 .site-nav .page-portfolio::after {
   content: '';
-
   display: block;
   width: 100%;
   height: 4px;
@@ -180,24 +179,38 @@
 }
 
 .contacts-link {
-  margin-left: auto;
-  justify-content: flex-end;
+  // margin-left: auto;
+  // justify-content: flex-end;
+  @media screen and (min-width: 767px) {
+    & .item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+    & .item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    margin-left: auto;
+    & .item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 
   @media screen and (min-width: 768px) {
     padding-top: 21px;
     padding-bottom: 21px;
+    justify-content: center;
+    // align-self: center;
   }
 
   @media screen and (min-width: 1200px) {
-    margin-left: auto;
-    display: flex;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.16;
-  }
-
-  & .item:not(:last-child) {
-    margin-right: 30px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   & .email,
@@ -208,11 +221,10 @@
     font-size: 18px;
     line-height: 1.16;
     letter-spacing: 0.02em;
-    text-decoration: none;
 
     transition: $transition;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       font-size: 12px;
       line-height: 1.16;
     }
@@ -223,6 +235,12 @@
   & .email:focus,
   & .tel:focus {
     color: $accent-color;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-link .item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 

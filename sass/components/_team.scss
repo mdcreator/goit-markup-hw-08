@@ -97,8 +97,21 @@
 }
 
 .team-card {
-  @media screen and (mix-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 2);
+  }
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+  // &:nth-last-child(-n + 2) {
+  //   margin-bottom: 0;
+  // }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 30px * 4) / 4);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
